@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-white fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand me-4" href="/">
+            <a class="navbar-brand me-4" href="../index.html">
                 <img src="../assets/images/razinsoft_logo.svg" class="logo" alt="brand logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#docSidebar"
@@ -51,7 +51,8 @@
                     aria-labelledby="docSidebarLabel">
                     <div class="offcanvas-header default-shadow">
                         <h5 class="offcanvas-title" id="docSidebarLabel">ReadyPos</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#docSidebar" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#docSidebar"
+                            aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="menu">
@@ -63,7 +64,7 @@
                                     aria-expanded="false" aria-controls="Prerequisite">
                                     Prerequisite
                                 </div>
-                                <div class="collapse" id="Prerequisite">
+                                <div class="collapse submenuBox" id="Prerequisite">
                                     <a href="" class="sub-menu-link">Basic</a>
                                     <a href="" class="sub-menu-link">Server</a>
                                     <a href="" class="sub-menu-link">Mobile App</a>
@@ -74,10 +75,42 @@
                 </div>
             </aside>
         </div>
-        <div class="main-content">
-            main content
+        <div class="main-content pt-2">
+            <div class="container">
+                <div class="documentation-section">
+
+                    <header>
+                        <h1 class="header">Introduction</h1>
+                    </header>
+                    <section id="overview">
+                        <h2 class="title">
+                            <strong>Overview</strong>
+                            <a class="hash-link" href="#overview" title="Direct link to heading">#</a>
+                        </h2>
+                        <p>Thank you for your interest in ReadyPos.</p>
+                        <p>ReadyPos is a complete POS system developed using Laravel and vue.js Framework. Laravel ( PHP
+                            Framework ) is a web application framework with an expressive, elegant syntax. We’ve already
+                            laid the foundation — freeing you to create without sweating the small things. Vue.js is a
+                            progressive JavaScript framework for building user interfaces (UIs). It's often used for
+                            developing single-page applications and is designed to be incrementally adoptable, meaning
+                            you can integrate it into existing projects or use it to build entire applications from
+                            scratch. <strong>Its user for manage pos part.</strong></p>
+                        <p>Ready Pos application is a web base application developed by using it Laravel and Vue js.</p>
+                    </section>
+
+                    <nav class="pagination-nav" aria-label="Docs pages navigation">
+                        <div class="pagination-nav-item"></div>
+                        <div class="pagination-nav-item pagination-nav-item-next">
+                            <a class="pagination-nav-link" href="">
+                                <div class="pagination-nav-sublabel">Next</div>
+                                <div class="pagination-nav-label">Basic</div>
+                            </a>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
         </div>
-        <div class="right-content"></div>
     </div>
     <footer class="footer-section">
         <div class="container">
