@@ -122,16 +122,17 @@
                                     code and paste in <code>.htaccess</code> file at the root of your project.(Already
                                     provide this file if this file have not exist please continue this step )
                                 </li>
-        <code class="text-success p-0">
-        <pre class="bg-light rounded">                    
-            &lt;IfModule mod_rewrite.c&gt;
-                RewriteEngine On
-                RewriteBase /
-                RewriteRule ^$ public/index.php [L]
-                RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
-            &lt;/IfModule&gt;
-        </pre>
-        </code>
+
+    <code class="text-success p-0">
+    <pre class="bg-light rounded w-100 overflow-x-scroll">                    
+        &lt;IfModule mod_rewrite.c&gt;
+            RewriteEngine On
+            RewriteBase /
+            RewriteRule ^$ public/index.php [L]
+            RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+        &lt;/IfModule&gt;
+    </pre>
+    </code>
                             </ol>
 
                             <div class="alert alert-danger">

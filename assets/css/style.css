@@ -22,6 +22,9 @@ code {
   border-radius: 0.4rem;
   vertical-align: middle;
 }
+pre{
+  white-space:pre-wrap
+}
 
 .font-12 {
   font-size: 12px;
@@ -355,7 +358,11 @@ code {
     max-width: 720px;
   }
 }
+
 @media (max-width: 767px) {
+  .layout .left-content{
+    width: 0;
+  }
   .hero_title {
     font-size: 2rem;
   }
@@ -375,5 +382,24 @@ code {
   }
   .doc-sidebar{
     z-index: 1050;
+  }
+}
+@media (max-width:465px){
+  body{
+    font-size: 14px;
+  }
+  .pagination-nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .pagination-nav-item{
+    max-width: 100%;
+    flex-grow: 1;
+  }
+  .pagination-nav-item-next{
+    margin: 0;
+  }
+  .pagination-nav-link{
+    padding: 12px;
   }
 }
