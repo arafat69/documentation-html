@@ -373,4 +373,7 @@ code {
   .title {
     font-size: 1.4rem;
   }
+  .doc-sidebar{
+    z-index: 1050;
+  }
 }
