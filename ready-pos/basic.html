@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReadyPos Documentation | Razinsoft</title>
+    <title>Basic | ReadyPos</title>
 
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../assets/css/font-awesome_6.4.2_all.min.css">
@@ -55,15 +55,15 @@
                     <div class="offcanvas-body">
                         <ul class="menu">
                             <li>
-                                <a href="#" class="link active">Introduction</a>
+                                <a href="index.html" class="link">Introduction</a>
                             </li>
                             <li>
-                                <div class="link sub-menu" data-bs-toggle="collapse" data-bs-target="#Prerequisite"
+                                <div class="link sub-menu active" data-bs-toggle="collapse" data-bs-target="#Prerequisite"
                                     aria-expanded="false" aria-controls="Prerequisite">
                                     Prerequisite
                                 </div>
-                                <div class="collapse submenuBox" id="Prerequisite">
-                                    <a href="basic.html" class="sub-menu-link">Basic</a>
+                                <div class="collapse submenuBox show" id="Prerequisite">
+                                    <a href="basic.html" class="sub-menu-link active">Basic</a>
                                     <a href="server.html" class="sub-menu-link">Server</a>
                                 </div>
                             </li>
@@ -91,31 +91,48 @@
                 <div class="documentation-section">
 
                     <header>
-                        <h1 class="header">Introduction</h1>
+                        <h1 class="header">Basic</h1>
                     </header>
-                    <section id="overview">
-                        <h2 class="title">
-                            <strong>Overview</strong>
-                            <a class="hash-link" href="#overview" title="Direct link to heading">#</a>
-                        </h2>
-                        <p>Thank you for your interest in ReadyPos.</p>
-                        <p>ReadyPos is a complete POS system developed using Laravel and vue.js Framework. Laravel ( PHP
-                            Framework ) is a web application framework with an expressive, elegant syntax. We’ve already
-                            laid the foundation — freeing you to create without sweating the small things. Vue.js is a
-                            progressive JavaScript framework for building user interfaces (UIs). It's often used for
-                            developing single-page applications and is designed to be incrementally adoptable, meaning
-                            you can integrate it into existing projects or use it to build entire applications from
-                            scratch. <strong>Its user for manage pos part.</strong></p>
-                        <p>Ready Pos application is a web base application developed by using it Laravel and Vue js.</p>
+                    <section id="basic">
+                        <p>As ReadyPos is a complete system  for web appslication. it is compulsory to have some basic knowledge in  server side development if you want to do the installation, setup and publishing with your branding yourself.</p>
+
+                        <ul>
+                            <li>Real server Server related knowledge like apache or local machine server, we preferred to use a real server.</li>
+                            <li>
+                                Server related knowledge and we preferred cPanel in your server for quick installation
+                            </li>
+                            <li>
+                                Basic knowledge in PHP and Laravel if you want to do some customization yourself (Not compulsory).
+                            </li>
+                        </ul>
+
+                        <div class="alert alert-danger">
+                            <div class="alert-head"> 
+                                <img src="../assets/images/fire.svg" alt="" width="20"> 
+                                <span class="ms-2">WARNING</span>
+                            </div>
+                            <p>
+                                The Envato price don’t included any kind of installation and app publishing support. You need to follow the documentation step by step for installation, setup and other branding related changes. We are not responsible for your mistake. Also if you do any kind of customization it is totally your responsibility.
+                            </p>
+                        </div>
+                        
                     </section>
 
                     <nav class="pagination-nav" aria-label="Docs pages navigation">
-                        <div class="pagination-nav-item"></div>
+                        <div class="pagination-nav-item">
+                            <a class="pagination-nav-link" href="index.html">
+                                <div class="pagination-nav-sublabel">Previous</div>
+                                <div class="pagination-nav-label">
+                                    <i class="fa-solid fa-angles-left arrow"></i>
+                                    Introduction
+                                </div>
+                            </a>
+                        </div>
                         <div class="pagination-nav-item pagination-nav-item-next">
-                            <a class="pagination-nav-link" href="basic.html">
+                            <a class="pagination-nav-link" href="server.html">
                                 <div class="pagination-nav-sublabel">Next</div>
                                 <div class="pagination-nav-label">
-                                    Basic <i class="fa-solid fa-angles-right arrow"></i>
+                                    Server <i class="fa-solid fa-angles-right arrow"></i>
                                 </div>
                             </a>
                         </div>

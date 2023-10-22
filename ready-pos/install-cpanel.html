@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Install on cPanel shared hosting | ReadyPos</title>
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/font-awesome_6.4.2_all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand me-4" href="../index.html">
+                <img src="../assets/images/razinsoft_logo.svg" class="logo" alt="brand logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#docSidebar"
+                aria-controls="docSidebar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-nav justify-content-start align-items-center flex-grow-1 d-none d-lg-flex">
+                <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            ReadyPos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Laundry
+                        </a>
+                    </li>
+                </ul>
+                <a href="https://razinsoft.com/" target="_blank"
+                    class="text-decoration-none text-dark visitBtn d-none d-lg-block">
+                    Visit Razinsoft <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="body-content">
+        <div class="layout">
+            <div class="left-content">
+                <aside class="doc-sidebar">
+                    <div class="offcanvas-lg offcanvas-start" data-bs-scroll="true" tabindex="-1" id="docSidebar"
+                        aria-labelledby="docSidebarLabel">
+                        <div class="offcanvas-header default-shadow">
+                            <h5 class="offcanvas-title" id="docSidebarLabel">ReadyPos</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                data-bs-target="#docSidebar" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="menu">
+                                <li>
+                                    <a href="index.html" class="link">Introduction</a>
+                                </li>
+                                <li>
+                                    <div class="link sub-menu" data-bs-toggle="collapse" data-bs-target="#Prerequisite"
+                                        aria-expanded="false" aria-controls="Prerequisite">
+                                        Prerequisite
+                                    </div>
+                                    <div class="collapse submenuBox" id="Prerequisite">
+                                        <a href="basic.html" class="sub-menu-link">Basic</a>
+                                        <a href="server.html" class="sub-menu-link">Server</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="link sub-menu active" data-bs-toggle="collapse"
+                                        data-bs-target="#adminpanel" aria-expanded="false" aria-controls="adminpanel">
+                                        Admin Panel
+                                    </div>
+                                    <div class="collapse submenuBox show" id="adminpanel">
+                                        <a href="install-localhost.html" class="sub-menu-link">
+                                            Install on localhost
+                                        </a>
+                                        <a href="install-cpanel.html" class="sub-menu-link active"
+                                            title="install on cPanel shared hosting">
+                                            install on cPanel shared hosting
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="main-content pt-2">
+                <div class="container">
+                    <div class="documentation-section">
+
+                        <header>
+                            <h1 class="header">Install on cPanel shared hosting</h1>
+                        </header>
+                        <section id="installLocalhost">
+
+                            <ol>
+                                <li>
+                                    Zip your project
+                                </li>
+                                <li>Login to cPanel and navigate to File Manager</li>
+                                <li>Ensure you're in the root folder, then click "Upload"</li>
+                                <li>Select your zip file and wait for upload to complete</li>
+                                <li>Unzip the uploaded file</li>
+                                <li>All file and directory move to root folder</li>
+                                <li>Go back to Cpanel and navigate to Databases</li>
+                                <li>Created a database and add (create if non exist) a DB user</li>
+
+                                <div class="image-box">
+                                    <img src="../assets/images/Live-DB-Image-01.png" alt="" class="w-100 mb-3">
+                                    <img src="../assets/images/Live-DB-Image-02.png" alt="" class="w-100 mb-3">
+                                    <img src="../assets/images/Live-DB-Image-03.png" alt="" class="w-100 mb-3">
+                                    <img src="../assets/images/Live-DB-Image-04.png" alt="" class="w-100 mb-3">
+                                </div>
+                                <li>Click on your fresh DB, and click "Import"</li>
+                                <li>Select Our laundry.sql file</li>
+                                <li>Make hidden files visible in your cpanel then finally edit the .env file and editing
+                                    DB username and password and etc..</li>
+                                <li>You don't need to make changes to the structure of Laravel. Just copy below htaccess
+                                    code and paste in <code>.htaccess</code> file at the root of your project.(Already
+                                    provide this file if this file have not exist please continue this step )
+                                </li>
+        <code class="text-success p-0">
+        <pre class="bg-light rounded">                    
+            &lt;IfModule mod_rewrite.c&gt;
+                RewriteEngine On
+                RewriteBase /
+                RewriteRule ^$ public/index.php [L]
+                RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+            &lt;/IfModule&gt;
+        </pre>
+        </code>
+                            </ol>
+
+                            <div class="alert alert-danger">
+                                <div class="alert-head"> 
+                                    <img src="../assets/images/fire.svg" alt="" width="20"> 
+                                    <span class="ms-2">WARNING</span>
+                                </div>
+                                <p>
+                                    You should configure your web server's document / web root to be the public directory.
+                                </p>
+                            </div>
+
+                        </section>
+
+                        <section id="Configuration" class="mt-4">
+                            <h2 class="title">
+                                <strong>Configuration</strong>
+                                <a class="hash-link" href="#Configuration" title="Direct link to heading">#</a>
+                            </h2>
+                            <ul>
+                                <li>
+                                    Please copy the <code>.env.example</code> and rename it to <code>.env</code> and fill up the <code> .env</code>
+                                </li>
+                            </ul>
+                            <div class="ms-3">
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    APP_NAME = (Youe App Name)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    APP_ENV = (Local Production)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    APP_URL = (https:// Your Domain Link..)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    DB_DATABASE = (Your Database Name)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    DB_USERNAME = (Your Database Username)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    DB_PASSWORD = (Your Database Password)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    MAIL_MAILER = (SMTP Email Relay Services)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    MAIL_HOST = Your Mail Host(For Example: smtp.gmail.com)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    MAIL_PORT = Your Mail Port(For Example: 587)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    MAIL_USERNAME = (Your Mail Username)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    MAIL_PASSWORD = (Your Mail Password)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    MAIL_ENCRYPTION = (SSL, TLS)
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-angles-right me-2 font-12"></i>
+                                    MAIL_FROM_ADDRESS = (For Example: no-reply@gmail.com)
+                                </p>
+                                <li>You need to fill the database connection details, administration details, and store details to .env example file.
+                                </li>
+                            </div>
+                        </section>
+
+                        <nav class="pagination-nav" aria-label="Docs pages navigation">
+                            <div class="pagination-nav-item">
+                                <a class="pagination-nav-link" href="install-localhost.html">
+                                    <div class="pagination-nav-sublabel">Previous</div>
+                                    <div class="pagination-nav-label">
+                                        <i class="fa-solid fa-angles-left arrow"></i>
+                                        Install on localhost
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- <div class="pagination-nav-item pagination-nav-item-next">
+                                <a class="pagination-nav-link" href="install-cpanel.html">
+                                    <div class="pagination-nav-sublabel">Next</div>
+                                    <div class="pagination-nav-label">
+                                        Install on cPanel <i class="fa-solid fa-angles-right arrow"></i>
+                                    </div>
+                                </a>
+                            </div> -->
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer_title">Address</div>
+                        <p class="m-0">Flat#-7th floor, H# 19, Road# 08, Shekhertek Adabor Thana Mohammedpur Dhaka
+                            -1207, Bangladesh.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+                        <div class="footer_title">For any kind of support</div>
+                        <a href="mailto:support@razinsoft.com">support@razinsoft.com</a>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0 ">
+                        <img src="../assets/images/razinsoft_logo.svg" alt="" width="100" class="footerLogo">
+                        <p>© 2020-2023 razinsoft. All rights reserved.</p>
+                        <div class="d-flex gap-3 flex-wrap socialLink">
+                            <!-- facebook link -->
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <!-- linkedin link -->
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <!-- behance link -->
+                            <a href="#"><i class="fa-brands fa-square-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/font-awesome_6.4.2_all.min.js"></script>
+</body>
+
+</html>

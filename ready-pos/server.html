@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReadyPos Documentation | Razinsoft</title>
+    <title>Server | ReadyPos</title>
 
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../assets/css/font-awesome_6.4.2_all.min.css">
@@ -55,16 +55,16 @@
                     <div class="offcanvas-body">
                         <ul class="menu">
                             <li>
-                                <a href="#" class="link active">Introduction</a>
+                                <a href="index.html" class="link">Introduction</a>
                             </li>
                             <li>
-                                <div class="link sub-menu" data-bs-toggle="collapse" data-bs-target="#Prerequisite"
+                                <div class="link sub-menu active" data-bs-toggle="collapse" data-bs-target="#Prerequisite"
                                     aria-expanded="false" aria-controls="Prerequisite">
                                     Prerequisite
                                 </div>
-                                <div class="collapse submenuBox" id="Prerequisite">
+                                <div class="collapse submenuBox show" id="Prerequisite">
                                     <a href="basic.html" class="sub-menu-link">Basic</a>
-                                    <a href="server.html" class="sub-menu-link">Server</a>
+                                    <a href="server.html" class="sub-menu-link active">Server</a>
                                 </div>
                             </li>
                             <li>
@@ -91,31 +91,54 @@
                 <div class="documentation-section">
 
                     <header>
-                        <h1 class="header">Introduction</h1>
+                        <h1 class="header">Server</h1>
                     </header>
-                    <section id="overview">
-                        <h2 class="title">
-                            <strong>Overview</strong>
-                            <a class="hash-link" href="#overview" title="Direct link to heading">#</a>
-                        </h2>
-                        <p>Thank you for your interest in ReadyPos.</p>
-                        <p>ReadyPos is a complete POS system developed using Laravel and vue.js Framework. Laravel ( PHP
-                            Framework ) is a web application framework with an expressive, elegant syntax. We’ve already
-                            laid the foundation — freeing you to create without sweating the small things. Vue.js is a
-                            progressive JavaScript framework for building user interfaces (UIs). It's often used for
-                            developing single-page applications and is designed to be incrementally adoptable, meaning
-                            you can integrate it into existing projects or use it to build entire applications from
-                            scratch. <strong>Its user for manage pos part.</strong></p>
-                        <p>Ready Pos application is a web base application developed by using it Laravel and Vue js.</p>
+                    <section id="server">
+                        <p>Before you install make sure your server meets the following requirements:</p>
+                        <ul>
+                            <li>
+                                ReadyPOS requires PHP v8.1 + and MySQL 5.7  or MariaDB 10.0
+                            </li>
+                            <li>Intl PHP Extension</li>
+                            <li>Intl Curl PHP Extension</li>
+                            <li>PDO PHP Extension</li>
+                            <li>Mbstring PHP Extension</li>
+                            <li>XML PHP Extension</li>
+                            <li>JSON PHP Extension</li>
+                            <li>Zip Extension</li>
+                            <li>sodium Extension</li>
+                            <li>BCMath Extension</li>
+                        </ul>
+
+                        <p>In most servers these extensions are enabled by default, but you should check with your hosting provider.</p>
+
+                        <div class="alert alert-danger">
+                            <div class="alert-head"> 
+                                <img src="../assets/images/fire.svg" alt="" width="20"> 
+                                <span class="ms-2">WARNING</span>
+                            </div>
+                            <p>
+                                Please do this very carefully. We will not be responsible for your mistake.
+                            </p>
+                        </div>
+                        
                     </section>
 
                     <nav class="pagination-nav" aria-label="Docs pages navigation">
-                        <div class="pagination-nav-item"></div>
-                        <div class="pagination-nav-item pagination-nav-item-next">
+                        <div class="pagination-nav-item">
                             <a class="pagination-nav-link" href="basic.html">
+                                <div class="pagination-nav-sublabel">Previous</div>
+                                <div class="pagination-nav-label">
+                                    <i class="fa-solid fa-angles-left arrow"></i>
+                                    Basic
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pagination-nav-item pagination-nav-item-next">
+                            <a class="pagination-nav-link" href="install-localhost.html">
                                 <div class="pagination-nav-sublabel">Next</div>
                                 <div class="pagination-nav-label">
-                                    Basic <i class="fa-solid fa-angles-right arrow"></i>
+                                    Install on localhost <i class="fa-solid fa-angles-right arrow"></i>
                                 </div>
                             </a>
                         </div>
